@@ -91,7 +91,7 @@ I'm unable to access the specific usage data from the provided URL as it require
 4. **Exporting Data:**
    - Currently, xAI does not provide a direct export feature for usage data. However, you can manually copy the displayed data into a CSV file for further analysis.
 
-![Usage Data](./public/usage.png)
+![Usage Data](https://github.com/gazzette-ai/fox/blob/master/public/Usage.png)
 
 **Automated Data Extraction:**
 
