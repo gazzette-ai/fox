@@ -1,0 +1,222 @@
+/* CSS Reset and Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color Scheme Variables */
+  --terminal-bg: #1a1b26;
+  --terminal-fg: #a9b1d6;
+  --terminal-primary: #7aa2f7;
+  --terminal-secondary: #f7768e;
+  --terminal-accent: #bb9af7;
+  --terminal-success: #9ece6a;
+  --terminal-warning: #e0af68;
+  --terminal-error: #f7768e;
+  --terminal-header: #16161e;
+  --terminal-border: #292e42;
+  --terminal-code-bg: #1f2335;
+
+  /* Typography Variables */
+  --terminal-font: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --terminal-font-size: clamp(14px, 1.2vw, 16px);
+  --terminal-line-height: 1.7;
+}
+
+/* Body Styles */
+body {
+  background-color: var(--terminal-bg);
+  color: var(--terminal-fg);
+  font-family: var(--terminal-font);
+  font-size: var(--terminal-font-size);
+  line-height: var(--terminal-line-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+/* Container */
+.terminal-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--terminal-bg);
+  border: 1px solid var(--terminal-border);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.terminal-header {
+  background: var(--terminal-header);
+  padding: 16px;
+  border-bottom: 2px solid var(--terminal-primary);
+  position: relative;
+}
+
+/* Terminal Body */
+.terminal-body {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--terminal-primary) var(--terminal-code-bg);
+  color: var(--terminal-fg);
+}
+
+/* Custom Scrollbar */
+.terminal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+  background: var(--terminal-code-bg);
+  border-radius: 4px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: var(--terminal-primary);
+  border-radius: 4px;
+}
+
+/* Messages */
+.terminal-message {
+  margin-bottom: 16px;
+}
+
+.terminal-message .prompt {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-message .prompt::before {
+  content: '>';
+  color: var(--terminal-primary);
+}
+
+.terminal-message.user .prompt::before {
+  content: '@fbi-agent $';
+  color: var(--terminal-secondary);
+}
+
+/* Code Blocks */
+.code-block-container {
+  position: relative;
+  margin: 16px 0;
+  background: var(--terminal-code-bg);
+  border-radius: 8px;
+  border: 1px solid var(--terminal-border);
+  overflow: hidden;
+}
+
+.code-block-container pre {
+  padding: 16px;
+  overflow-x: auto;
+  position: relative;
+}
+
+.code-block-container pre code {
+  font-family: var(--terminal-font);
+  tab-size: 2;
+}
+
+/* Copy Button */
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--terminal-primary);
+  color: var(--terminal-bg);
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+/* Input Area */
+.terminal-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  background: var(--terminal-header);
+  border-top: 2px solid var(--terminal-primary);
+}
+
+.input-field {
+  flex: 1;
+  background: transparent;
+  color: var(--terminal-fg);
+  border: none;
+  font-family: var(--terminal-font);
+  font-size: var(--terminal-font-size);
+  padding: 8px;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+/* Menu Tabs */
+.menu-tabs {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--terminal-header);
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.menu-tab {
+  padding: 8px 16px;
+  color: var(--terminal-fg);
+  background-color: var(--terminal-bg);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.menu-tab:hover {
+  background-color: var(--terminal-primary);
+}
+
+.menu-tab.active {
+  background-color: var(--terminal-secondary);
+  color: var(--terminal-bg);
+}
+
+/* Notification Text */
+.notification {
+  color: #ffffff;
+}
+
+/* Ethical Consideration Text */
+.ethical-consideration {
+  color: #ffffff;
+}
+
+.ethical-considerations,
+.model-information {
+  color: #ffffff;
+}
+
+.developerinfo {
+  color: #ffffff;
+}
+
+.x-character {
+  color: #ffffff;
+}
+
+/* Command Success/Error States */
+.command-success {
+  color: var(--terminal-success);
+}
+
+.command-error {
+  color: var(--terminal-error);
+}
