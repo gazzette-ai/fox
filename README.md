@@ -29,8 +29,8 @@ xAI offers an API interface for developers to programmatically interact with Gro
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/{your-username}/xai-fox.git
-   cd xai-fox
+   git clone https://github.com/gazzette-ai/fox.git
+   cd fox
    ```
 
 2. **Install Dependencies:**
@@ -72,10 +72,6 @@ xAI offers an API interface for developers to programmatically interact with Gro
    ```
 
 For more information, visit the [xAI Docs](https://docs.x.ai/docs/overview#getting-started).
-
-## Accessing Your xAI API Usage Data
-
-I'm unable to access the specific usage data from the provided URL as it requires authentication. However, I can guide you on how to extract and analyze your xAI API usage data.
 
 **Accessing Your xAI API Usage Data:**
 
