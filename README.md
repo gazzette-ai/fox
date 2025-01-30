@@ -6,7 +6,7 @@ Welcome to xAI Fox! This guide will help you set up and modify the project with 
 
 ## Live Project
 
-You can check the live project at [xAI Fox Live](https://xai-fox.vercel.app).
+You can check the live project at [xAI Fox Live](https://gazzette-xai-fox.vercel.app).
 
 ## Technologies Used
 
